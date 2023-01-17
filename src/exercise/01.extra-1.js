@@ -1,10 +1,11 @@
 // useState: greeting
+// 💯 accept an initialName
 // http://localhost:3000/isolated/exercise/01.js
 
 import * as React from 'react'
 
-function Greeting() {
-  const [name, setName] = React.useState('')
+function Greeting({initialName}) {
+  const [name, setName] = React.useState(initialName)
 
   function handleChange(event) {
     setName(event.target.value)
@@ -27,7 +28,7 @@ function Greeting() {
 }
 
 function App() {
-  return <Greeting />
+  return <Greeting initialName="Thea" />
 }
 
 export default App
